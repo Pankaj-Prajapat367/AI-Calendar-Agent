@@ -8,7 +8,7 @@ import pytz
 load_dotenv()  # Loads variables from .env into environment
 
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-SERVICE_ACCOUNT_FILE = os.getenv("SERVICE_ACCOUNT_FILE", "/etc/secrets/service_account.json")
+SERVICE_ACCOUNT_FILE =  "/etc/secrets/service_account.json"
 
 credentials = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_FILE, scopes=SCOPES
